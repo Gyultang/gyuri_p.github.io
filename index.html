@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGR portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style11.css">
+    <script src="./js/jquery.js"></script>
+</head>
+<body>
+     <div id="wrap">
+        <header id="head">
+            <div class="head_m">
+                <a href="#">
+                    <img src="./images/Home.png" alt="home버튼입니다">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#skill">SKILL</a></li>
+                        <li><a href="#project">PROJECT</a></li>
+                        <li><a href="#contact">CONTECT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 메인 -->
+        <section id="main">
+            <div class="video">
+                <video src="./images/rain_-_78 (Original).mp4" width="100%" height="auto" object-fit="cover" autoplay loof muted></video>
+            </div>
+            <div class="text">
+                <p>Front End Developer</p>
+                <span>Gyu Ri Kim</span>
+            </div>
+            
+            
+           
+        </section>
+
+        <!-- 소개 -->
+        <section id="about">
+            <div class="about_in">
+                <p>&lt;About me&gt;</p>
+                <div class="about_t">
+                    <img src="./images/about_img1.jpg">
+                    <div>
+                    <span>
+                        이름: 김규리 <br>
+                        <br>
+                        이름: 김규리 성별: 여 가나다라마바사<br>
+                        이름: 김규리 성별: 여 가나다라마바사<br>
+                        이름: 김규리 성별: 여 가나다라마바사<br>
+                        이름: 김규리 성별: 여 가나다라마바사<br>
+                        이름: 김규리 성별: 여 가나다라마바사<br>
+                        이름: 김규리 성별: 여 가나다라마바사<br>
+                        이름: 김규리 성별: 여 가나다라마바사<br>
+                        이름: 김규리 성별: 여 가나다라마바사<br>
+                        이름: 김규리 성별: 여 가나다라마바사<br>
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 스킬 -->
+        <section id="skill">
+            <div class="skill_in">
+                    <p>&lt;Skills&gt;</p>
+                    <div class="skill_t">
+                        <div id="stack">
+                            <div class="s_1"><div class="s01"></div></div>
+                            <div class="s_1"><div class="s02"></div></div>
+                            <div class="s_1"><div class="s03"></div></div>
+                            <div class="s_1"><div class="s04"></div></div>
+                            <div class="s_1"><div class="s05"></div></div>
+                        </div>
+                        <div id="icon">
+                            <ul>
+                                <li><i class="fa-brands fa-html5" id="html"></i></li>
+                                <li><i class="fa-brands fa-css3" id="css"></i></li>
+                                <li><i class="fa-brands fa-js" id="js"></i></li>
+                                <li><i class="fa-brands fa-git" id="git"></i></li>
+                                <li><i class="fa-brands fa-react" id="react"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <script>
+            $(document).ready(function(){
+               var scene01Num = 1;
+
+               $(window).scroll(function(){
+                   var scrollTop = $(document).scrollTop();
+                   if(scrollTop > 1800 && scene01Num == 1) {
+                       scene01Num = 0;
+                       $('#stack .s_1 .s01').stop().delay(0).css({top:'450px'}).animate({top:'150px'},1000);
+                       $('#stack .s_1 .s02').stop().delay(0).css({top:'450px'}).animate({top:'180px'},1000);
+                       $('#stack .s_1 .s03').stop().delay(0).css({top:'450px'}).animate({top:'250px'},1000);
+                       $('#stack .s_1 .s04').stop().delay(0).css({top:'450px'}).animate({top:'400px'},1000);
+                       $('#stack .s_1 .s05').stop().delay(0).css({top:'450px'}).animate({top:'400px'},1000);
+
+                   }
+                   else if(scrollTop < 1500 && scene01Num == 0){
+                       scene01Num = 1;
+                       $('#stack .s_1 .s01').stop().css({top:'150px'}).animate({top:'450px'},1000);
+                       $('#stack .s_1 .s02').stop().css({top:'180px'}).animate({top:'450px'},1000); 
+                       $('#stack .s_1 .s03').stop().css({top:'250px'}).animate({top:'450px'},1000);
+                       $('#stack .s_1 .s04').stop().css({top:'400px'}).animate({top:'450px'},1000);
+                       $('#stack .s_1 .s05').stop().css({top:'400px'}).animate({top:'450px'},1000);
+
+                   }
+               });
+            });
+
+        </script>
+
+        <!-- 프로젝트 -->
+        <section id="project">
+            <div class="project_in">
+                <p>&lt;Project&gt;</p>
+                <!-- 슬라이드 -->
+                <div class="project_c">
+                    <div class="proj01">
+                        <img src="./images/antenna_main.png" width="300px" height="550px">
+                    </div>
+                    <div class="proj01_text">
+                        
+                    </div>
+               
+
+           
+                    <div class="proj01">
+                        <img src="./images/moca_MAIN.png" width="300px" height="550px">
+                    </div>
+                    <div class="proj01_text">
+                        
+                    </div>
+              
+
+             
+                    <div class="proj01">
+                        <img src="./images/antenna_main.png" width="300px" height="550px">
+                    </div>
+                    <div class="proj01_text">
+                        
+                </div>
+                </div>
+                <button class="left">left</button>
+                <button class="right">right</button>
+            </div>
+        </section>
+        <script src="./js/javascript.js"></script>
+        
+
+        <!-- 하단 (연락) -->
+        <footer id="contact">
+            <div class="contact_in">
+                <p>&lt;contact&gt;</p>
+                <div>
+                    <a href="#"><i class="fa-solid fa-envelope" id="mail"> </i></a>
+                    <a href="#"><i class="fa-brands fa-github" id="github"></i></a>
+                    <a href="#"><i class="fa-solid fa-t" id="tstory"></i></a>
+                </div>
+
+        </footer>
+
+     </div>
+
+
+     <script src="https://kit.fontawesome.com/20ba346cfc.js" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/f09b.js" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/54.js" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/f13b.js" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/f13c.js" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/f3b8.js" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/f1d3.js" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/f41b.js" crossorigin="anonymous"></script>
+
+ 
+
+</body>
+</html>
